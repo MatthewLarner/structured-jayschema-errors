@@ -1,32 +1,32 @@
 {
-    "name": "structured-jayschema-errors",
-    "version": "1.0.0",
-    "description": "Return jayschema error messages with the same structure as the validated data",
-    "main": "index.js",
-    "scripts": {
-        "test": "node ./tests"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/matthewLarner/structured-jayschema-errors.git"
-    },
-    "keywords": [
-        "jayschema",
-        "errors",
-        "message",
-        "transform",
-        "structured"
-    ],
-    "author": "Matt Larner <matt.larner.dev@gmail.com>",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/matthewLarner/structured-jayschema-errors/issues"
-    },
-    "homepage": "https://github.com/matthewLarner/structured-jayschema-errors",
-    "devDependencies": {
-        "compare-structure": "^1.0.0",
-        "jayschema": "^0.3.1",
-        "string-template": "^0.2.1",
-        "tape": "^4.0.0"
-    }
+  "name": "structured-jayschema-errors",
+  "version": "1.0.1",
+  "description": "Return jayschema error messages with the same structure as the validated data",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/matthewLarner/structured-jayschema-errors.git"
+  },
+  "keywords": [
+    "jayschema",
+    "errors",
+    "message",
+    "transform",
+    "structured"
+  ],
+  "author": "Matt Larner <matt.larner.dev@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/matthewLarner/structured-jayschema-errors/issues"
+  },
+  "homepage": "https://github.com/matthewLarner/structured-jayschema-errors",
+  "devDependencies": {
+    "compare-structure": "^1.0.0",
+    "jayschema": "^0.3.1",
+    "string-template": "^0.2.1",
+    "tape": "^4.0.0"
+  }
 }
