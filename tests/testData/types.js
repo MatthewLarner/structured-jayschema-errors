@@ -1,0 +1,37 @@
+module.exports = {
+    data: {
+        "a": 1,
+        "b": "2",
+        "c": 3,
+        "d": 4,
+        "e": 5,
+        "f": 6,
+        "g": 7
+    },
+    schema: {
+        "type": "object",
+        "properties": {
+            "a": {
+                "type": "string",
+            },
+            "b": {
+                "type": "number",
+            },
+            "c": {
+                "type": "object",
+            },
+            "d": {
+                "type": "array",
+            },
+            "e": {
+                "type": "boolean",
+            },
+            "f": {
+                "type": "null"
+            },
+            "g": {
+                "type": "someOtherType"
+            }
+        }
+    }
+};
