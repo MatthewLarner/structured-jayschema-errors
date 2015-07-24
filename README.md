@@ -12,8 +12,8 @@ var structureErrors = require('structured-jayschema-errors');
 
 var data = {
     a: 1,
-    e: {
-        c: 3,
+    b: {
+        c: "3",
         d: 4
     }
 };
@@ -36,7 +36,7 @@ schema = {
     }
 };
 
-var errors = jaySchema(data, schema);
+var errors = jaySchema.validate(data, schema);
 
 var structuredErrors = structureErrors(myJaySchemaErrorsOutput);
 
@@ -80,25 +80,7 @@ For example, you may want to transform the errors into a human readable form.
 
 ```javascript
 
-schema = {
-    "type": "object",
-    "properties": {
-        "a": {
-            "type": "string"
-        },
-        "b": {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-                "c": {
-                    "type": "number"
-                }
-            }
-        }
-    }
-};
-
-var errors = jaySchema(data, schema),
+var errors = jaySchema.validate(data, schema),
     transformErrors = require('./my-error-transform-function');
 
 var structuredErrors = structureErrors(myJaySchemaErrorsOutput, transformErrors);
