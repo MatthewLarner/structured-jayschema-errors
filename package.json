@@ -1,6 +1,6 @@
 {
   "name": "structured-jayschema-errors",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "Return jayschema error messages with the same structure as the validated data",
   "main": "index.js",
   "scripts": {
