@@ -27,7 +27,7 @@ function structureErrors(errors, transformError){
         if(error.constraintName === 'anyOf'){
             var message = transformError(error);
 
-            setError(error.instanceContext + '/anyOf', message, result);
+            setError(error.instanceContext + '/_anyOf', message, result);
 
             return;
         }

@@ -59,7 +59,7 @@ test('transformError', function(t) {
     t.deepEqual(errors, expectedErrorObject);
 });
 
-test.only('anyOf', function(t) {
+test('anyOf', function(t) {
     t.plan(1);
 
     var jayschema = new Jayschema(),
@@ -67,7 +67,7 @@ test.only('anyOf', function(t) {
         data = testData.data,
         schema = testData.schema,
         expectedErrorObject = {
-            anyOf: 'One of the following fields must be set: a, b'
+            _anyOf: 'One of the following fields must be set: a, b'
         };
 
     var errors = structureErrors(jayschema.validate(data, schema), transformError);
