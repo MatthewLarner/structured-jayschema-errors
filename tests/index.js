@@ -59,6 +59,22 @@ test('transformError', function(t) {
     t.deepEqual(errors, expectedErrorObject);
 });
 
+test('anyOf', function(t) {
+    t.plan(1);
+
+    var jayschema = new Jayschema(),
+        testData = require('./testData/' + t.name),
+        data = testData.data,
+        schema = testData.schema,
+        expectedErrorObject = {
+            _anyOf: 'One of the following fields must be set: a, b'
+        };
+
+    var errors = structureErrors(jayschema.validate(data, schema), transformError);
+
+    t.deepEqual(errors, expectedErrorObject);
+});
+
 test('baseTypeError', function(t) {
     t.plan(1);
 

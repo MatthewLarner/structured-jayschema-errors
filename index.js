@@ -24,6 +24,14 @@ function structureErrors(errors, transformError){
             return;
         }
 
+        if(error.constraintName === 'anyOf'){
+            var message = transformError(error);
+
+            setError(error.instanceContext + '/_anyOf', message, result);
+
+            return;
+        }
+
         setError(error.instanceContext, transformError(error), result);
     });
 
