@@ -40,7 +40,22 @@ module.exports = function transformError(error){
         additionalProperties: function() {
             return 'Property not allowed';
         },
-        enum: compile('Value must one of the following enum values: {constraintValue}')
+        enum: compile('Value must one of the following enum values: {constraintValue}'),
+        anyOf: function(x){
+
+            var message = 'One of the following fields must be set: ',
+                requiredKeys = [];
+
+            error.constraintValue.forEach(function(constraint){
+                if(constraint.required){
+                    requiredKeys = requiredKeys.concat(constraint.required);
+                }
+            });
+
+            message += requiredKeys.join(', ');
+
+            return message;
+        }
     };
 
     var errorTemplate = messages[error.constraintName];
